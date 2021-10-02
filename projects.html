@@ -1,45 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <title>John Korhel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
+
 <body>
-    <header class="navbar navbar-default">
-        <nav>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">korhel.net</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="index.html">korhel.net</a>
-        </nav>
-        <div class="container">
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="">Me</a></li>
-                    <li><a aria-current="page" href="#">Projects</a></li>
-                    <li><a href="experience">Experience</a></li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="experience.html">Experience</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </header>
-    <main role="main">
-        <div class="container">
-            <div class="row">
-                <h1 class="headerText">Projects</h1>
-            </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h1 class="headerText" style="margin-top:20px;margin-bottom:30px;">Projects</h1>
         </div>
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <div class="card projectCard">
+            <div class="card-header">
+                Lockheed Martin
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Unity CI/CD Build Pipeline</h5>
+                <p class="card-text">Leveraging Gitlab CI/CD and Docker to create a pipeline that automatically builds and distributes Unity project builds in the cloud. A base Docker image with multiple tags (associated with build operating system) are used to build the Unity executable for the specified platform. When this completes, builds are stored as an artifact available for download in the Gitlab CI/CD.</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+            <div class="card-footer text-muted">
+                <img class="projectLogos" style="width: 3.5%" src="370801.svg">
+                <img class="projectLogos" src="gitlab-icon-rgb.svg">
+              </div>
+        </div>
+        <div class="card projectCard">
+            <div class="card-header">
+                Lockheed Martin
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">EC2 Provisioner as a Service (EPaaS)</h5>
+                <p class="card-text">A web application built on Angular and CI/CD principles. Provides team members with an effecient interface to create and provision new AWS EC2 instances. Options selected on the Angular app are sent as an API request to Gitlab CI/CD, where those options are handled with Ansible and Terraform to provision a new EC2 instance. Installing packages, setting appropriate proxies, security groups, etc. Overall, this saves team members hours of work.</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+            <div class="card-footer text-muted">
+                <img class="projectLogos" style="width: 3%" src="terraformio-icon.svg">
+                <img class="projectLogos" src="gitlab-icon-rgb.svg">
+                <img class="projectLogos" style="width: 3%" src="ansible-icon.svg">
+                <img class="projectLogos" src="Amazon_Web_Services-Logo.wine.svg">
+              </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     </script>
 </body>
+
 </html>
